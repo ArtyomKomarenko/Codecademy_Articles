@@ -1,0 +1,15 @@
+<div class="profile">
+  <div class="container">
+
+    <h2>My Profile</h2>
+    <div>First name <div class="mimput"><%= current_user.first_name %></div></div>
+    <div class="clearfix"></div>
+    <div>Last name <div class="mimput"><%= current_user.last_name %></div></div>
+    <div class="clearfix"></div>
+    <div>Email <div class="mimput"><%= current_user.email %></div></div>
+    <div class="clearfix"></div>
+    <%= link_to "Edit", profile_edit_path, class: "btn-submit" %>
+
+
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="profile">
+  <div class="container">
+
+    <h2>Edit Profile</h2>
+    <%= form_for current_user do |f| %>
+
+      <%= f.hidden_field :user_id, value: current_user.id %>
+
+      <%= f.label :first_name%>
+      <%= f.text_field :first_name, value: current_user.first_name %>
+      <div class="clearfix"></div>
+      <%= f.label :last_name%>
+      <%= f.text_field :last_name, value: current_user.last_name %>
+      <div class="clearfix"></div>
+      <%= f.label :email%>
+      <%= f.email_field :email, value: current_user.email %>
+      <div class="clearfix"></div>
+      <%= f.submit "Save", class: "btn-submit" %>
+    <% end %>
+
+  </div>
+</div>
