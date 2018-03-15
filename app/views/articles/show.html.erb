@@ -6,7 +6,12 @@
     <p class="article_content"><%= @article.body %></p>
 
     <!-- Your code here -->
-
+    <% if current_user&.author? %>
+      <ul>
+        <li><%= link_to "Edit", edit_article_path, class: "custom-button" %></li>
+        <li><%= link_to "Delete", article_path(@article), class: "custom-button", method: "delete" %></li>
+      </ul>
+    <% end %>
     
   </div>
 </div>
